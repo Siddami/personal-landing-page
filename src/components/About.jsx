@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
-export default function About() {
+function About() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white flex items-center px-4 sm:px-6 md:px-20 py-16"
+      className="bg-white dark:bg-gray-900 text-black dark:text-white flex items-center px-4 sm:px-6 md:px-20 py-16"
     >
       <div className="max-w-4xl mx-auto">
         <motion.h2
@@ -23,7 +23,7 @@ export default function About() {
           className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300"
         >
           <p>
-            I'm Siddiqat Abdulkareem — a passionate <strong>frontend developer</strong> who believes in building clean, accessible, and user-focused digital experiences. Whether I’m writing code, managing content, or strategizing community engagement, I always aim to create work that resonates.
+            I'm Siddiqat Abdulkareem, a passionate <strong>frontend developer</strong> who believes in building clean, accessible, and user-focused digital experiences. Whether I’m writing code, managing content, or strategizing community engagement, I always aim to create work that resonates.
           </p>
 
           <p>
@@ -42,3 +42,5 @@ export default function About() {
     </section>
   );
 }
+
+export default About;
