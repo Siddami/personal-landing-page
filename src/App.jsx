@@ -1,12 +1,30 @@
-import React from 'react';
+import { useState, useEffect } from "react";
+import Loader from "./components/Loader";
+import Header from "./components/Header";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 1800);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div className="text-red-500 text-3xl font-bold underline">
-      App
+    <div className="font-sans bg-white text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <main className="px-6 py-10 max-w-3xl mx-auto space-y-20">
+          <Header />
+          <About />
+          <Contact />
+        </main>
+      )}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
