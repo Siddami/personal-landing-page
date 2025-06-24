@@ -19,7 +19,7 @@ function App() {
       ) : (
         <>
           <Header />
-          <main className="px-6 py-10 max-w-3xl mx-auto space-y-20">
+          <main className="max-w[1440px] mx-auto space-y-20">
             <About />
             <Contact />
           </main>
