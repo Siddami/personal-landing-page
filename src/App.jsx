@@ -17,11 +17,13 @@ function App() {
       {isLoading ? (
         <Loader />
       ) : (
-        <main className="px-6 py-10 max-w-3xl mx-auto space-y-20">
+        <>
           <Header />
-          <About />
-          <Contact />
-        </main>
+          <main className="px-6 py-10 max-w-3xl mx-auto space-y-20">
+            <About />
+            <Contact />
+          </main>
+        </>
       )}
     </div>
   );
